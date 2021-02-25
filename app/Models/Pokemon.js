@@ -28,8 +28,8 @@ export default class Pokemon{
 
     get ButtonBuilder(){
         if(this._id){
-            return `
-            <button class="btn btn-danger" onclick="app.myPokeController.releasePokemon()">Release Pokemon</button>
+        return `
+        <button class="btn btn-danger" onclick="app.myPokeController.releasePokemon()">Release Pokemon</button>
             `
         }
         return `

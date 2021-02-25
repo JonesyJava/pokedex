@@ -2,7 +2,7 @@ import { ProxyState } from "../AppState.js";
 import Pokemon from "../Models/Pokemon.js";
 import { sandboxApi } from "./AxiosService.js";
 
-class MyPokemonService{
+class MyPokeService{
     constructor(){
         this.getMyPokemon()
     }
@@ -18,8 +18,11 @@ class MyPokemonService{
 
 async catchPokemon(){
     try {
+        delete ProxyState.activePokemon._id
         let res = await sandboxApi.post("", ProxyState.activePokemon)
+        console.log(res)
         ProxyState.myPokemon = [...ProxyState.myPokemon, new Pokemon(res.data)]
+        this.getMyPokemon()
     } catch (error) {
         console.error(error)
     }
@@ -43,4 +46,4 @@ async catchPokemon(){
 
 }
 
-export const myPokeService = new MyPokemonService();
+export const myPokeService = new MyPokeService();

@@ -1,10 +1,10 @@
-import MyPokemonController from "./Controllers/MyPokeController.js";
+import MyPokeController from "./Controllers/MyPokeController.js";
 import PokeAPIController from "./Controllers/PokeAPIController.js"
 
 class App {
   pokeApiController = new PokeAPIController();
 
-  myPokeService = new MyPokemonController();
+  myPokeController = new MyPokeController();
 }
 
 window["app"] = new App();
