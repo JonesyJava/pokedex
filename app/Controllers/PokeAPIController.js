@@ -4,7 +4,7 @@ function _drawWildPokemon(){
     let pokemon = ProxyState.wildApiPokemon
         console.log(pokemon)
     let template = ""
-    pokemon.forEach(p => template += `<li onclick="app.pokeApiController.setActivePokemon('${p.name}')"> ${p.name} </li>`)
+    pokemon.forEach(p => template += `<li class="hoverp" onclick="app.pokeApiController.setActivePokemon('${p.name}')"> ${p.name} </li>`)
     document.getElementById("api-pokemon").innerHTML = template;
 }
 

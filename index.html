@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>pokedex</title>
 </head>
 
@@ -25,7 +27,7 @@
         <div class="row">
             <div class="col-3 bg-danger overflow-auto poke text-color text-center border border-dark">
                 <h1 class="card bg-danger box-title pb-2">Wild Pokemon</h1>
-                <ul id="api-pokemon"></ul>
+                <ul id="api-pokemon" class="pointer"></ul>
             </div>
 
             <div class="col-6 border border-dark text-center" id="active-pokemon">
@@ -45,12 +47,7 @@
 
 
     </main>
-    <footer class="container-fluid bg-dark text-light">
-        <div class="row text-center">
-            <div class="col">
-                <p><small>Made with love by Codeworks</small></p>
-            </div>
-        </div>
+
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -3,8 +3,8 @@ export default class Pokemon{
         this.name = data.name
         this.height = data.height
         this.weight = data.weight
-        this.types = data.types[0].type.name
-        this.img = data.sprites.other.dream_world.front_default
+        this.types = data.types[0] || data.types[0].type.name
+        this.img = data.img || data.sprites.other.dream_world.front_default
         this.description = data.description
         this._id = data._id || ""
 
