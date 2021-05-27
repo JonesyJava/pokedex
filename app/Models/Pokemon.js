@@ -3,11 +3,13 @@ export default class Pokemon{
         this.name = data.name
         this.height = data.height
         this.weight = data.weight
-
+        // date.types will either be true : false within ternary
+        // sandboxAPI sends array
+        // pokeAPI send string
         // interate over original array via map()
         // then bring in and target internal array
         // join allows for you to bring the array data as a string without digging too deep
-        this.types = data.types.map(t => t.type.name).join(' - ')
+        this.types = typeof(data.types[0]) == 'string' ? data.types[0] : data.types.map(t => t.type.name).join(' - ')
         this.img = data.img || data.sprites.other.dream_world.front_default
         this.description = data.description
         this._id = data._id || ""

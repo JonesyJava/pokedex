@@ -4,7 +4,7 @@ import { myPokeService } from "../Services/MyPokeService.js"
 function _drawMyPokemon(){
     let pokemon = ProxyState.myPokemon
     let template = ""
-    pokemon.forEach(p => template += `<li onclick="app.myPokeController.setActivePokemon('${p._id}')" > ${p.name} </li>`)
+    pokemon.forEach(p => template += `<li class="hoverp" onclick="app.myPokeController.setActivePokemon('${p._id}')" > ${p.name} </li>`)
     document.getElementById("my-pokemon").innerHTML = template;
 }
 
