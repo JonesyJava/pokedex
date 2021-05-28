@@ -6,7 +6,9 @@ export default class NotificationService {
             icon: icon,
             title: title,
             confirmButton: '#3085d6',
+            showCancelButton: true,
             confirmButtonText: 'Release',
+            cancelButtonColor: '#d33',
             toast: true,
             showConfirmButton: true,
          })

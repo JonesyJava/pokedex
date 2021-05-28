@@ -4,8 +4,8 @@ export default class Pokemon{
         this.height = data.height
         this.weight = data.weight
         // date.types will either be true : false within ternary
-        // sandboxAPI sends array
-        // pokeAPI send string
+        // pokeAPI send array
+        // sandboxAPI sends string
         // interate over original array via map()
         // then bring in and target internal array
         // join allows for you to bring the array data as a string without digging too deep
